@@ -3,11 +3,15 @@ package main
 import "github.com/gin-gonic/gin"
 
 func main() {
-	r := gin.Default()
+	// instance
+	g := gin.Default()
+
 	// routes
-	r.GET("/ping", handler)
+	//r.GET("/ping", handler)
+	registerRoutes(g)
+
 	// run
-	r.Run()
+	g.Run()
 
 }
 
